@@ -32,10 +32,10 @@ const Admin = () => {
         <div>
             <Navigation></Navigation>
             <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 col-4">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-10 col-8">
                     {
                         value === true ? <AddService></AddService> : <BookingService></BookingService>
                     }
