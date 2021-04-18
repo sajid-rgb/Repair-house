@@ -9,7 +9,7 @@ const OrderList = () => {
         fetch('https://mysterious-garden-14748.herokuapp.com/userInfos')
         .then(res=>res.json())
         .then(data=>setOrder(data))
-    },[])
+    })
     const handleStatusChange = (e) =>{
         setStatusChange(e.target.value);
 
@@ -39,7 +39,9 @@ const OrderList = () => {
                                 <th className='w-50 ml-0'>Name</th>
                                 <th className='w-50 ml-5'>Services</th>
                                 <th className='w-50 ml-0'>Email</th>
-                                <th className='w-100 ml-5'>Status</th>
+                                <th className='w-50 ml-0'>Card Id</th>
+                                <th className='w-100 ml-0'>Current Status</th>
+                                <th className='w-100 ml-5'>Change Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,9 +50,12 @@ const OrderList = () => {
                                    <td className='w-50 ml-0'>{or.name}</td>
                                    <td className='w-50 ml-5'>{or.serviceName}</td>
                                     <td className='w-50 ml-0'>{or.email}</td>
+                                    <td className='w-50 ml-0'>{or.id}</td>
+                                    <td className='w-100 ml-0'>{or.status}</td>
                                     <td className='w-100 ml-5 mt-0'>
                                         <select onChange={handleStatusChange}>
-                                           <option>{or.status}</option>
+                                            <option>Select</option>
+                                           <option>pending</option>
                                            <option>on going</option>
                                            <option>Done</option>
                                         </select>

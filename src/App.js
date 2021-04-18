@@ -39,26 +39,29 @@ function App() {
           <PrivateRoute path='/user/:id'>
             <User></User>
           </PrivateRoute>
-          <Route path='/info'>
+          <PrivateRoute path='/info'>
             <Admin></Admin>
-          </Route>
-          <Route path='/addAdmin'>
+          </PrivateRoute>
+          <PrivateRoute path='/addAdmin'>
             <AddAdmin></AddAdmin>
-          </Route>
-          <Route path='/addService'>
+          </PrivateRoute>
+          <PrivateRoute path='/addService'>
             <Admin></Admin>
-          </Route>
-          <Route path='/orderReview'>
+          </PrivateRoute>
+          <PrivateRoute path='/orderReview'>
             <OrderReview></OrderReview>
-          </Route>
-          <Route path='/orderList'>
+          </PrivateRoute>
+          <PrivateRoute path='/orderList'>
             <OrderList></OrderList>
-          </Route>
-          <Route path='/manage'>
+          </PrivateRoute>
+          <PrivateRoute path='/manage'>
             <ManageServices></ManageServices>
-          </Route>
+          </PrivateRoute>
           <Route path='/login'>
             <LogIn></LogIn>
+          </Route>
+          <Route path='*'>
+            <h3 className='text-danger text-center'>Link not found</h3>
           </Route>
         </Switch>
       </Router>

@@ -57,6 +57,7 @@ const CheckoutForm = ({order}) => {
       user.id= paymentMethod.id;
       user.error=''
       if(paymentMethod.id){
+        alert('Congratulations,Your payment added.Go to booking list to see your order lists.')
         fetch('https://mysterious-garden-14748.herokuapp.com/addInfo',{
             method: 'POST',
             headers: {

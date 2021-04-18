@@ -19,7 +19,6 @@ const Navigation = () => {
 
 <Nav className='ml-auto'>
     <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-    <Nav.Link to='/services'>Services</Nav.Link>
     <Nav.Link as={Link} to='/admin'>Dashboard</Nav.Link>
     {
         loggedInUser.email ? <Nav.Link as={Link} to='/login' OnClick={()=>setLoggedInUser({})}>Sign Out</Nav.Link>:<Nav.Link as={Link} to='/login'>Sign In</Nav.Link> 
