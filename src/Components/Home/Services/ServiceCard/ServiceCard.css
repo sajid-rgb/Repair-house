@@ -1,0 +1,39 @@
+.card-img{
+    border:2px solid orangered;
+     height: 250px; 
+     transition: 1s ease-in-out;
+}
+.card-title{
+    background-color: whitesmoke;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+}
+.card-body{
+    transform: translateY(-50px);
+    transition: 1s ease-in-out;
+}
+.card:hover .card-img{
+      transform: scale(1.2);  
+      opacity: .8;
+
+    /* animation: spin 1s linear 1; */
+
+}
+.card:hover .card-body{
+    transform: translateY(0px);
+    transition-delay: .5s;
+
+}
+@keyframes spin {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform:translate(-50px,90px);
+    }
+    
+}
