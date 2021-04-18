@@ -1,11 +1,10 @@
-import { useSpring, animated } from 'react-spring'
 import React, { useContext, useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import './ServiceCard.css'
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../../App';
    const ServiceCard=({service})=>{
-       const {imgURL,name,description,_id} = service
+       const {imgURL,name,description,_id,price} = service
        const [admin, setAdmin] = useState([])
     const [isAdmin,setIsAdmin] = useState(false)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
@@ -24,10 +23,7 @@ import { UserContext } from '../../../../App';
         else{
             value=false
         }
-          
-
-
-    }
+              }
     return (
         <div className='col-md-4'>
             <div className="text-center card">
@@ -38,7 +34,7 @@ import { UserContext } from '../../../../App';
                     {
                         value===false ? <Link to={'/user/'+_id} className='text-dark'><Card.Title className='card-title'>{name}</Card.Title></Link>:<Link to='/admin' className='text-dark'><Card.Title className='card-title'>{name}</Card.Title></Link>
                     }
-                        <Card.Text className='mt-3'>{description}</Card.Text>
+                        <Card.Text className='mt-3'><span>${price}</span><br/> {description}</Card.Text>
                     </Card.Body>
                 </Card>
             </div>

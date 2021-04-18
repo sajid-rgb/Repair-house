@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../../Home/Navigtaion/Navigation';
-import ManageServicesTable from '../ManageServicesTable/ManageServicesTable';
 import SideBar from '../Sidebar/SideBar';
 
 const ManageServices = () => {
@@ -36,7 +35,7 @@ const ManageServices = () => {
                 {
                     services.map(service =><tr  className='mt-5 mb-5 '>
                         <td className="ml-5 w-50 ">{service.name}</td>
-                        <td className="ml-5 w-50">123</td>
+                        <td className="ml-5 w-50">{service.price}</td>
                         <td className="w-50">
                          <button className="btn btn-danger" onClick={() =>handleDelete(service._id)}>Delete</button>
                         </td>

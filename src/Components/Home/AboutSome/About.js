@@ -10,10 +10,6 @@ const About = () => {
               <h1>It’s Our Honour, To
 Be With You</h1>
 <p>There are many variations of passages of electronics Services, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. by injected humour, or randomised words which don't look.</p>
-
-{/* <p>There are many variations of passages of electronics repair, but the majority have suffered alteration in some form, by injected humour, or randomised words duskam azer which don't look
-
-</p> */}
 <button className='btn text-white' style={{backgroundColor:'orangered'}}>Discover More <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
             </div>
             <div className="col-md-5 mt-2 mb-5">

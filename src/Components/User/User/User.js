@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Navbar } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import { UserContext } from '../../../App';

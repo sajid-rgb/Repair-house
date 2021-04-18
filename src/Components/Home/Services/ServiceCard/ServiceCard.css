@@ -13,7 +13,7 @@
     box-shadow: 1px 1px 2px black;
 }
 .card-body{
-    transform: translateY(-50px);
+    transform: translateY(-80px);
     transition: 1s ease-in-out;
 }
 .card:hover .card-img{
@@ -24,7 +24,7 @@
 
 }
 .card:hover .card-body{
-    transform: translateY(0px);
+    transform: translateY(-50px);
     transition-delay: .5s;
 
 }

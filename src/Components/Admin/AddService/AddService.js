@@ -9,16 +9,17 @@ const AddService = () => {
         price:''
     })
     
-    const handleAdd = () =>{
-        fetch('https://mysterious-garden-14748.herokuapp.com/addService',{
+    const handleAdd = (e) =>{
+        if(service.name && service.price && service.description)
+       { fetch('https://mysterious-garden-14748.herokuapp.com/addService',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
             },
             body:JSON.stringify(service)
         })
-        
-
+        }
+        e.preventDefault()
     }
     const handleOnBlur=(e)=>{
         const newService={...service}
@@ -40,14 +41,16 @@ const AddService = () => {
           });
 
     }
-    console.log(service);
     return (
         <div>
-           <input type="text" name='name' onBlur={handleOnBlur} placeholder='Enter Name'/><br/>
-           <input type="text" name='description' onBlur={handleOnBlur} placeholder='description'/><br/>
-           <input type="text" name='price' onBlur={handleOnBlur} placeholder='price'/><br/>
-           <input type="file" onChange={handleChangeImage}/><br/>
-           <button className='btn btn-warning' onClick={handleAdd} >Add</button>
+           <form action="">
+               <h3>Add Products Here</h3>
+           <input type="text" className='' name='name' onBlur={handleOnBlur} placeholder='Enter Name'  required style={{width: '250px'}}/><br/>
+           <input type="text" name='description' onBlur={handleOnBlur} placeholder='description' className='mt-2' style={{width: '250px'}} required/><br/>
+           <input type="text" name='price' className='mt-2' onBlur={handleOnBlur} placeholder='price' style={{width: '250px'}} required/><br/> <br/>
+           <input type="file" onChange={handleChangeImage} required/><br/>
+           <button className='btn btn-success mt-3'  onClick={handleAdd} >Add Services</button>
+           </form>
         </div>
     );
 };

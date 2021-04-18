@@ -65,20 +65,20 @@ const CheckoutForm = ({order}) => {
             body: JSON.stringify(user)
         })
       }
-      
-    }
-    
-  };
+          }
+};
 
   return (
     <form onSubmit={handleSubmit}>
       <CardElement />
       <button as={Link} to='/info' type="submit" disabled={!stripe} >
-        Pay
+        Pay Now
       </button>
       {
           userInfo.error && <p>{userInfo.error}</p>
-      }
+      } 
+      <br/>
+      <small className="ml-0 text-info">**You must pay ${price} for this service</small>
     </form>
   );
 };

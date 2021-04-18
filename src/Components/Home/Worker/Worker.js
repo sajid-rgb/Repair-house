@@ -1,5 +1,4 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
 import worker1 from '../../../images/worker1.jpg'
 import worker2 from '../../../images/worker2.jpg';
 import worker3 from '../../../images/worker3.jpg';
@@ -45,8 +44,6 @@ const Worker = () => {
                         {
                             workers.map(worker => <WorkerSlide worker={worker}></WorkerSlide>)
                         }
-
-
                 </div>
         </div>
     );

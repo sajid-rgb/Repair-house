@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import pc from '../../../images/pc1.jpg'
-import laptop from '../../../images/laptop1.jpg'
-import mobile from '../../../images/mobile1.jpg'
 import ServiceCard from './ServiceCard/ServiceCard';
 
 const Services = () => {
@@ -15,7 +12,7 @@ const Services = () => {
         <div>
             <div className="container mx-auto text-center mb-5 mt-5 ">
                 <h1>OUR <span style={{ color:'orangered'}}>SERVICES</span></h1>
-                <p style={{width:'60%',margin:'auto'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cupiditate sint inventore recusandae iure quidem mollitia tempora deleniti maxime fuga.</p>
+                <p style={{width:'60%',margin:'auto'}}>We provide electronics services. as well as camera repair, mobile repair, laptop repair etc.</p>
             </div>
             <div className='row container mx-auto'>
                 {

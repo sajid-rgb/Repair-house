@@ -5,7 +5,6 @@ import SideBar from '../Sidebar/SideBar';
 const OrderList = () => {
     const [order,setOrder] = useState([])
     const [statusChange,setStatusChange] = useState(null)
-    // const [loggedInUser,setLoggedInUser] = useContext(UserContext)
     useEffect(()=>{
         fetch('https://mysterious-garden-14748.herokuapp.com/userInfos')
         .then(res=>res.json())
@@ -15,6 +14,7 @@ const OrderList = () => {
         setStatusChange(e.target.value);
 
     }
+    
     const handleStatusUpdate = (id) =>{
         fetch(`https://mysterious-garden-14748.herokuapp.com/status/${id}`,{
             method:'PATCH',
@@ -23,11 +23,8 @@ const OrderList = () => {
               },
             body:JSON.stringify({statusChange})
         })
-
-        console.log(id,statusChange);
-
-
     }
+
     return (
         <div >
             <Navigation></Navigation>
@@ -53,9 +50,9 @@ const OrderList = () => {
                                     <td className='w-50 ml-0'>{or.email}</td>
                                     <td className='w-100 ml-5 mt-0'>
                                         <select onChange={handleStatusChange}>
-                                            <option> {or.status}</option>
-                                            <option>on going</option>
-                                            <option>Done</option>
+                                           <option>{or.status}</option>
+                                           <option>on going</option>
+                                           <option>Done</option>
                                         </select>
                                         <button className='mt-2' onClick={()=>handleStatusUpdate(or._id)}>update</button>
                                        </td>

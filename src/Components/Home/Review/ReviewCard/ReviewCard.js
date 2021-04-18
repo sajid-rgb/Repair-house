@@ -1,14 +1,6 @@
 import React from 'react';
-import Slider from 'react-slick';
 const ReviewCard = ({review}) => {
     const {name,image,description,designation} = review;
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
     return (
     
         <div className='col-md-4 mb-4'>

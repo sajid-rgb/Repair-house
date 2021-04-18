@@ -7,30 +7,27 @@ import AddService from '../AddService';
 
 const Admin = () => {
     const [admin, setAdmin] = useState([])
-    const [isAdmin,setIsAdmin] = useState(false)
+    const [isAdmin, setIsAdmin] = useState(false)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     useEffect(() => {
         fetch('https://mysterious-garden-14748.herokuapp.com/admin')
             .then(res => res.json())
             .then(data => setAdmin(data))
-    },[])
+    }, [])
     let newAdmin;
-    let value=false
-    console.log(admin.length,admin);
-    if(admin.length>0){
-         newAdmin = admin.find(ad=>ad.email===loggedInUser.email )
-         console.log('check',newAdmin);
-         if(newAdmin){
-              value=true
+    let value = false
+    console.log(admin.length, admin);
+    if (admin.length > 0) {
+        newAdmin = admin.find(ad => ad.email === loggedInUser.email)
+        console.log('check', newAdmin);
+        if (newAdmin) {
+            value = true
         }
-        else{
-            value=false
+        else {
+            value = false
         }
-          
-
-
     }
-   console.log(value);
+
     return (
         <div>
             <Navigation></Navigation>
@@ -39,10 +36,10 @@ const Admin = () => {
                     <SideBar></SideBar>
                 </div>
                 <div className="col-md-10">
-                {
-                    value===true ? <AddService></AddService> : <BookingService></BookingService>
-                }
-                
+                    {
+                        value === true ? <AddService></AddService> : <BookingService></BookingService>
+                    }
+
                 </div>
             </div>
 
