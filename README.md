@@ -2,13 +2,23 @@ Live Site: https://repair-house-70c7c.web.app/
 
 Technology used:  
 *React js
-*node js *express js 
+
+*node js 
+
+*express js 
+
 *mongo db 
+
 *css
+
 *bootstrap 
+
 *stripe 
+
 *firebase    
+
 *heroku
+
 *axios
 
 Features:
@@ -21,6 +31,8 @@ order list and order status at any time.
 
 4) Admin can see all order lists and change the order status. 
 
-5) He/she can add another admin at any time.
+5) Admin can add another admin at any time.
+
+
 
 
